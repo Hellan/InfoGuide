@@ -24,32 +24,32 @@ $.fn.extend({
 
 $(document).ready(function() {
 
-    $("#dishes button:first").click(function() {
+    $(".dishes button:first").click(function() {
         $(this).toggleText("DELICIOUS", "FISH");
 
     });
 
-    $("#dishes button:eq(1)").click(function() {
+    $(".dishes button:eq(1)").click(function() {
         $(this).toggleText("DELICIOUS", "OCTOPUS");
 
     });
 
-    $("#dishes button:eq(2)").click(function() {
+    $(".dishes button:eq(2)").click(function() {
         $(this).toggleText("DELICIOUS", "TOMATOS");
 
     });
 
-    $("#dishes button:eq(3)").click(function() {
+    $(".dishes button:eq(3)").click(function() {
         $(this).toggleText("DELICIOUS", "FIGS");
 
     });
 
-    $("#dishes button:eq(4)").click(function() {
+    $(".dishes button:eq(4)").click(function() {
         $(this).toggleText("DELICIOUS", "GOZLEME");
 
     });
 
-    $("#dishes button:eq(5)").click(function() {
+    $(".dishes button:eq(5)").click(function() {
         $(this).toggleText("DELICIOUS", "CREPES");
 
     });
@@ -67,10 +67,10 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 2500) {
-        $(".jumbotron").css("background-image", "url(img/bg.JPG)");
+        $(".info").css("background", "url(img/bg.JPG) no-repeat fixed center/cover");
     } else {
-        $(".jumbotron").css('background-image', '');
-        $(".jumbotron").css("background-color", "white");
+        $(".info").css('background-image', '');
+        $(".info").css("background-color", "white");
     }
 });
 
@@ -107,3 +107,7 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+

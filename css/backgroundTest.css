@@ -2,25 +2,18 @@
     font-family: 'McLaren', cursive !important;
 }
 
-.smaller {
-    width: 1300px;
-    padding-left: 60px;
-    padding-right: 20px;
-}
-
 .northBeach {
-    background: url("../img/v2.JPG") no-repeat fixed center bottom/cover;
+    background: url("../img/nb.JPG") no-repeat fixed center bottom/cover;
     position: relative;
     text-align: center;
     padding-top: 10em;
     padding-right: 0px;
     padding-bottom: 10em;
     height: 900px;
-    width: 100%;
-    padding-top: 69.23%;
-    background-size: contain;
-    /* (img-height / img-width * width) */
-    /* (900 / 1300 * 100) */
+}
+
+.ul {
+    margin-left: 70px;
 }
 
 .map,
@@ -46,17 +39,14 @@ p {
 }
 
 .village {
-    background: url("../img/v3.JPG") no-repeat fixed center bottom/cover;
+    background: url("../img/village.JPG") no-repeat fixed center bottom/cover;
     position: relative;
     text-align: center;
-    padding: 16em 0px 12em;
-    padding-top: 16em;
+    padding-top: 10em;
     padding-right: 0px;
-    padding-bottom: 12em;
-    padding-left: 0px;
-    width: 100%;
+    padding-bottom: 10em;
+    height: 900px;
     padding-top: 69.23%;
-    
 }
 
 html body.homepage div.map h3 {
@@ -66,17 +56,14 @@ html body.homepage div.map h3 {
 }
 
 .fisherMan {
-    background: url("../img/v4.JPG") no-repeat fixed center/cover;
+    background: url("../img/fisherMan.JPG") no-repeat fixed center/cover;
     position: relative;
     text-align: center;
-    padding: 30em 0px 12em;
-    padding-top: 30em;
+    padding-top: 10em;
     padding-right: 0px;
-    padding-bottom: 20em;
-    padding-left: 0px;
-    width: 100%;
+    padding-bottom: 10em;
+    height: 900px;
     padding-top: 69.23%;
-    /*background-size: contain;*/
 }
 
 .text {
@@ -96,9 +83,12 @@ html body.homepage div.map h3 {
     text-decoration: none;
 }
 
+html body.homepage div.menu nav.navbar.navbar-fixed-top.navbar-inverse.container-fluid ul.collapse.navbar-collapse.nav.navbar-nav {
+    margin-left: 40px;
+}
+
 ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
 }
 
@@ -116,8 +106,8 @@ li {
     opacity: 1.0;
 }
 
-button {
-    display: block inline;
+.icon-bar {
+    display: block;
 }
 
 .btn {
@@ -152,31 +142,16 @@ button {
     transition: 0.9s !important;
 }
 
-html body.homepage div.smaller div.menu nav.navbar.navbar-fixed-top.navbar-inverse.container-fluid div.navbar-header {
-    padding-left: 33px;
+.menu {
+    position: fixed;
 }
 
-html body.homepage div.smaller div.info div.jumbotron h2 {
-    font-weight: bold;
+html body.homepage div.menu nav.navbar.navbar-fixed-top.navbar-inverse.container-fluid ul {
+    padding-left: 40px;
 }
 
-div.jumbotron img {
-    width: 363px;
-    height: 350px;
-}
-
-.jumbotron {
-    height: 550px !important;
-    background-color: white !important;
-    border-radius: 20px !important;
-}
-
-html body.homepage div.smaller div.info div.jumbotron img.pull-right.img-circle {
-    opacity: 0.85;
-}
-
-html body.homepage div.smaller div.info div.jumbotron img.pull-right.img-circle:hover {
-    opacity: 1.0;
+h4 {
+    line-height: 1.5 !important;
 }
 
 html body.homepage div.smaller div.bars h3 center {
@@ -186,8 +161,13 @@ html body.homepage div.smaller div.bars h3 center {
 
 .bars {
     border-width: 0 1px;
-    border: solid #000;
-    border-radius: 20px;
+    border-top: solid #000;
+    border-bottom: solid #000;
+    border-radius: 0px;
+    margin-left: 45px;
+    margin-right: 54px;
+    background-color: black;
+    color: white;
 }
 
 #map-canvas {
@@ -196,6 +176,16 @@ html body.homepage div.smaller div.bars h3 center {
     width: 100%;
     padding-top: 69.23%;
     background-size: contain;
+}
+
+.map,
+.northBeach,
+.village,
+.fisherMan,
+.mountin,
+.dishes {
+    margin-left: 45px;
+    margin-right: 54px;
 }
 
 .mountin {
@@ -280,4 +270,73 @@ html body.homepage div.smaller div.bars h3 center {
 
 .carousel-control.left {
     background-image: url("../img/bg.JPG") !important;
+}
+
+.hideText {
+    display: none;
+}
+
+.hideNavBar {
+    display: none;
+    height: 20px;
+}
+
+@media (max-width: 1000px) {
+    .content {
+        display: none;
+    }
+    .hideText {
+        display: block;
+        color: black;
+    }
+    .menu {
+        display: none;
+    }
+    .hideNavBar {
+        display: block;
+        position: fixed;
+        z-index: 999;
+    }
+    #dishPic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .collapse.in p,
+    .bars,
+    .mountin,
+    .map,
+    .village,
+    .fisherMan,
+    .dishes,
+    .northBeach {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    html body.homepage div.hideNavBar div.btn-group button.btn.btn-info.dropdown-toggle {
+        background: transparent;
+        border: none;
+        color: black;
+    }
+    .northBeach {
+        padding-top: 0;
+    }
+    .col-md-4 img,
+    .col-md-3 img {
+        margin-left: 20px;
+    }
+    html body.homepage div.hideNavBar div.btn-group.open ul.dropdown-menu {
+        background: transparent;
+    }
+    html body.homepage div.hideNavBar div.btn-group.open ul.dropdown-menu li a {
+        color: black;
+        font-weight: bold;
+    }
+    .dishes {
+        background-color: #bbbbbb;
+    }
+    ul.dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+        background: white !important;
+        color: black !important;
+    }
 }
